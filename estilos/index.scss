@@ -1,0 +1,135 @@
+body {
+  background: lightpink url('../media/fondo.jpg') no-repeat fixed center;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center center;
+  // font-size: 1.25em;
+}
+
+.container {
+  width: 90%;
+  min-height: 90vh;
+  background-color: var(--clr-principal);
+  border-radius: 25px;
+}
+
+header {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filtro-container {
+  border: 5px var(--clr-secundario-gris) solid;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  min-width: 21vw;
+
+  .filtro-img {
+    margin-left: .5em;
+    width: 1.5em;
+  }
+
+  input {
+    min-width: 21vw;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+    color: var(--clr-fuente);
+    padding: .5rem;
+  }
+
+  button {
+    background-color: var(--clr-secundario-gris);
+    border: 1px var(--clr-secundario-gris) solid;
+    min-height: 2.25rem;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+}
+
+main {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr:nth-child(odd) {
+    background-color: var(--clr-secundario-gris);
+  }
+
+  th, td {
+    padding: 1em 0;
+    text-align: center;
+    margin-right: 1em;
+  }
+
+  th {
+    font-weight: 300;
+  }
+}
+
+.check-td {
+  min-width: 2em;
+  margin-left: .25em;
+}
+
+.titulo-td {
+  min-width: 15ch;  
+}
+
+.autor-td {
+  min-width: 10ch;
+}
+
+
+.editorial-td {
+  min-width: 10ch;
+}
+
+.precio-td {
+  min-width: 8ch;
+}
+
+.opciones {
+  svg {
+    margin-right: .5em;
+  }
+}
+
+.eliminar {
+  display: none;
+  max-width: 25em;
+  gap: .5em;
+  position: absolute;
+  left: 50%;
+  bottom: 5em;
+  transform: translateX(-50%);
+}
+
+
+.eliminar.mostrar {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: auto;
+  }
+  
+  table {
+    width: initial;
+  }
+  
+}
