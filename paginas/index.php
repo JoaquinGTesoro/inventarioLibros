@@ -16,11 +16,11 @@
 <body>
   <div class="container">
     <header>
-      <div class="filtro-container">
-        <img class="filtro-img" src="../media/filtro.svg" alt="">
-        <input type="text" name="filtro" id="" placeholder="Filtrar libros">
-        <button type="submit"><img src="../media/flecha.svg" alt="Enviar busqueda"></button>
-      </div>
+        <form class="filtro-container" action="index.php" method="GET">
+          <img class="filtro-img" src="../media/filtro.svg" alt="">
+          <input type="text" name="filtro" id="" placeholder="Filtrar libros">
+          <button type="submit"><img src="../media/flecha.svg" alt="Enviar busqueda"></button>
+        </form>
       <a class="nuevo" href="">+ Añadir nuevo libro</a>
     </header>
     <main>
@@ -40,8 +40,8 @@
         <?php
           $filtro = false;
 
-          if (isset($_GET["$filtro"])) {
-            $filtro = $_GET['$filtro'];
+          if (isset($_GET["filtro"])) {
+            $filtro = $_GET['filtro'];
           }
         
           mostrarInfo($conexion, $filtro);
