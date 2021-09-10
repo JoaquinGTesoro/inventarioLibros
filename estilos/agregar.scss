@@ -1,0 +1,85 @@
+body {
+  background-color: var(--clr-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header h1 {
+  font-weight: bold;
+  position: relative;
+  font-size: 2.5em;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -.25em;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: var(--clr-secundario-violeta);
+  }
+}
+
+main {
+  --top-offset: 3em;
+  margin-top: var(--top-offset);
+  font-size: 1.15em;
+}
+
+form {
+  width: 25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: .75fr 1fr;
+  gap: 2em;
+}
+
+.container.ultimo{
+  margin-bottom: calc(var(--top-offset) / 2);
+}
+
+//Sacar flechas de numeros
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  border: 4px solid var(--clr-secundario-gris);
+  padding: .25em 1em;
+  border-radius: 25px;
+  background-color: transparent;
+  color: var(--clr-secundario-gris);
+}
+
+input:focus {
+  border-color: var(--clr-secundario-violeta);
+  color: var(--clr-fuente);
+}
+
+.btn {
+  cursor: pointer;
+  color: var(--clr-fuente);
+  background-color: var(--clr-secundario-violeta);
+  padding: 1.15em 6em;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+}

@@ -20,6 +20,7 @@ body {
 }
 
 a {
+  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   color: var(--clr-fuente);
@@ -27,4 +28,9 @@ a {
   padding: .75em 1em;
   border-radius: 25px;
   font-weight: bold;
+}
+
+.no-bkg {
+  background-color: transparent;
+  padding: 0;
 }

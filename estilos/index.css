@@ -7,6 +7,10 @@ body {
   place-items: center center;
 }
 
+svg {
+  cursor: pointer;
+}
+
 .container {
   width: 90%;
   min-height: 90vh;

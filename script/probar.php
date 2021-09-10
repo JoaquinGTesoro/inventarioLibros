@@ -2,11 +2,13 @@
   include 'funciones.php';
   include 'conexion.php';
 
-  $filtro = 'Addie';
+  // $filtro = 'Addie';
 
-  if (isset($_GET["$filtro"])) {
-    $filtro = $_GET['$filtro'];
-  }
+  // if (isset($_GET["$filtro"])) {
+  //   $filtro = $_GET['$filtro'];
+  // }
 
-  mostrarInfo($conexion, $filtro);
+  // mostrarInfo($conexion, $filtro);
+
+  mostrarDatos($conexion, 0);
 ?>

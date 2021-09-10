@@ -21,7 +21,7 @@
           <input type="text" name="filtro" id="" placeholder="Filtrar libros">
           <button type="submit"><img src="../media/flecha.svg" alt="Enviar busqueda"></button>
         </form>
-      <a class="nuevo" href="">+ Añadir nuevo libro</a>
+      <a class="nuevo" href="agregar.php">+ Añadir nuevo libro</a>
     </header>
     <main>
       <table>
@@ -54,6 +54,7 @@
   <script>
     const checkboxes = document.querySelectorAll('.checkbox');
     const eliminarMsg = document.querySelector('.eliminar');
+    const eliminarBtns = document.querySelectorAll('.eliminar-dato');
     let checked = 0;
 
     checkboxes.forEach(checkbox => {
@@ -66,6 +67,15 @@
         (checked) ? eliminarMsg.classList.add('mostrar') : eliminarMsg.classList.remove('mostrar') 
       })
     });
+
+    eliminarBtns.forEach(btn => {
+      let id = btn.id;
+      btn.addEventListener('click', () => {
+        if (window.confirm("¿Quiere eliminar esta entrada?")) {
+          location.href(`../script/eliminar.php?id=${id}`);
+        }
+      })
+    })
     
   </script>
 </body>
